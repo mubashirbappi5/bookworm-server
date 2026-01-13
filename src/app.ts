@@ -6,7 +6,7 @@ import authRoutes from "../routes/auth.js";
 
 import bookRoutes from "../routes/books.js";
 import genreRoutes from "../routes/genres.js";
-
+import reviewRoutes from "../routes/reviews.js";
 const app: Application = express();
 
 app.use(cors({
@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
 app.use("/api/genres", genreRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 
 
