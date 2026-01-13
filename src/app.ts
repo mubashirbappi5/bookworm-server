@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "../routes/auth.js";
 
 import bookRoutes from "../routes/books.js";
-
+import genreRoutes from "../routes/genres.js";
 
 const app: Application = express();
 
@@ -20,6 +20,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/books", bookRoutes);
+app.use("/api/genres", genreRoutes);
 
 
 
