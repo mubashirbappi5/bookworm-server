@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 
 import authRoutes from "../routes/auth.js";
 
+import bookRoutes from "../routes/books.js";
+
 
 const app: Application = express();
 
@@ -17,6 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/books", bookRoutes);
+
+
 
 app.get("/", (req, res) => {
   res.send("📚 Bookworm Server is running");
